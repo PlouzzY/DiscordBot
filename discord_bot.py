@@ -10,7 +10,7 @@ bot.remove_command("help")
 @bot.event
 async def on_ready():
     print("бот запущен")
-    await bot.change_presence(activity=disnake.Game(name="игры")) # активность бота, статус бота
+    await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # активность бота, статус бота
 
 @bot.command(name="пинг")
 async def ping(ctx):
