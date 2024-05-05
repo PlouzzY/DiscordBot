@@ -2,7 +2,6 @@
 import disnake
 from disnake.ext import commands
 
-
 intents = disnake.Intents.all() # определяем разрешения
 bot = commands.Bot(command_prefix="=", intents=intents) # устанавливаем префикс и разрешения
 bot.remove_command("help") # удаляем встроенную команду help 
@@ -12,7 +11,6 @@ bot.remove_command("help") # удаляем встроенную команду 
 async def on_ready(): # функция срабатывает когда бот запускается
     print("бот запущен") # получаем сообщение при запуске бота
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
-
 
 # РЕЗУЛЬТАТ - Вид в дискорде #2.png
 @bot.event # создаем ивент. для удобства, голосовой канал я буду заменять на войс
