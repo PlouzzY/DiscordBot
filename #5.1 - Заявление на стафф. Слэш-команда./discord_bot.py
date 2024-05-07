@@ -19,7 +19,7 @@ async def on_ready(): # функция срабатывает когда бот 
 async def statement1(interaction: disnake.ApplicationCommandInteraction, # передаем аргументы (можно в все в одну строчку)
                      name = commands.Param(name="имя", description="Ваше полное имя"),
                      age = commands.Param(name="возраст", description="Ваш полный возраст"),
-                     online = commands.Param(name="автив", description="Ваш средний онлайн в день")):
+                     online = commands.Param(name="актив", description="Ваш средний онлайн в день")):
     try: # пробуем парсировать age в int
         if int(age) < 15: # если возраст меньше 15
             return await interaction.response.send_message("Набор на должность строго с 15 лет!") # возвращаем ошибку
