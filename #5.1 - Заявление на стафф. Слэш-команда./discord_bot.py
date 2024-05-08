@@ -13,7 +13,7 @@ async def on_ready(): # функция срабатывает когда бот 
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
 
 
-# РЕЗУЛЬТАТ - Вид в дискорде #5.png
+# РЕЗУЛЬТАТ - Вид в дискорде
 # Так же читайте описание команды - Описание #5
 @bot.slash_command(name="заявка1") # создаем слэш-команду и даем ей название
 async def statement1(interaction: disnake.ApplicationCommandInteraction, # передаем аргументы (можно в все в одну строчку)
