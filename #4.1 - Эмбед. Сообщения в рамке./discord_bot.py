@@ -12,7 +12,7 @@ async def on_ready(): # функция срабатывает когда бот 
     print("бот запущен") # получаем сообщение при запуске бота
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
 
-# РЕЗУЛЬТАТ - Вид в дискорде #4-1.png
+# РЕЗУЛЬТАТ - Вид в дискорде #4.png
 @bot.command(name="эмбед") # создаем команду и даем ей название
 async def embed(ctx): # в функцию передаем аргумент context
     Name = disnake.Embed(title="Заголовок", description="Описание эмбеда", color=disnake.Colour.green()) # создаем эмбед (для удобства заменяйте Name на embed)
