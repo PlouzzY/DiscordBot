@@ -12,7 +12,7 @@ async def on_ready(): # функция срабатывает когда бот 
     print("бот запущен") # получаем сообщение при запуске бота
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
 
-# РЕЗУЛЬТАТ - Вид в дискорде #4.png
+# РЕЗУЛЬТАТ - Вид в дискорде
 @bot.slash_command(name="эмбеды") # создаем команду и даем название
 async def embeds(interaction: disnake.ApplicationCommandInteraction, # передаем аргументы в нашу команду
                  text1,
