@@ -8,13 +8,13 @@ bot.remove_command("help") # удаляем встроенную команду 
 
 
 @bot.event # создаем ивент
-async def on_ready(): # функция срабатывает когда бот запускается
+async def on_ready(): # функция срабатывает, если бот запустился
     print("бот запущен") # получаем сообщение при запуске бота
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
 
 # РЕЗУЛЬТАТ - Вид в дискорде
 @bot.event # создаем ивент
-async def on_message(message): # функция срабатывает когда кто-то отправляет сообщение
+async def on_message(message): # функция срабатывает, если кто-то отправляет сообщение
     await bot.process_commands(message) # игнорирует команды
     if message.author.bot: # проверка: если автор сообщения является ботом
         return
