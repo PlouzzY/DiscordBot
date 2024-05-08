@@ -8,7 +8,7 @@ bot.remove_command("help") # удаляем встроенную команду 
 
 
 @bot.event # создаем ивент
-async def on_ready(): # функция срабатывает когда бот запускается
+async def on_ready(): # функция срабатывает, если бот запустился
     print("бот запущен") # получаем сообщение при запуске бота
     await bot.change_presence(activity=disnake.Game(name="игры"), status=disnake.Status.online) # ставим активность и статус бота
 
