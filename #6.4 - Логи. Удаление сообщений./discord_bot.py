@@ -28,7 +28,3 @@ async def on_message_delete(message: disnake.Message): # функция сраб
 
 
 bot.run("токен")  # запуск бота (токен можно получить на портале разработчика)
-
-
-
-
