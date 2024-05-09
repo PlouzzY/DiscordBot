@@ -31,7 +31,3 @@ async def on_message_edit(before: disnake.Message, after: disnake.Message): # ф
 
 
 bot.run("токен")  # запуск бота (токен можно получить на портале разработчика)
-
-
-
-
