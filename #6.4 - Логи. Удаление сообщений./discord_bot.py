@@ -22,7 +22,7 @@ async def on_message_delete(message: disnake.Message): # функция сраб
     time = (disnake.utils.format_dt(datetime.now(), style='D')) # получаем время (style='D' позволяет в будущем наводиться на время, для получения точной даты) 
     embed = disnake.Embed(title=f"Удаление сообщения", description=f"Пользователь: {message.author.mention} \nКанал: {message.channel.mention} \nВремя: {time}", color=disnake.Colour.red()) # создание эмбеда
     embed.add_field(name="Содержание: ", value=f"> {message.content}", inline=False) # добовляем строки (.content - позволяет увидеть содержимое этого сообщения)
-    embed.set_thumbnail(url=message.author.display_avatar) # устанавливаем аватарку пользователя, который удалил сообщение
+    embed.set_thumbnail(url=message.author.display_avatar) # устанавливаем аватарку пользователя, чье сообщение было удалено
     await chnllog.send(embed=embed) # отправляем сообщение
 
 
