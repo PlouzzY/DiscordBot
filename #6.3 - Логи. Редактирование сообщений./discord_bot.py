@@ -21,8 +21,8 @@ async def on_message_edit(before: disnake.Message, after: disnake.Message): # ф
     chnllog = bot.get_channel(1225114215170310207) # получаем канал, в который будут скидываться сообщения о редактировании
     time = (disnake.utils.format_dt(datetime.now(), style='D')) # получаем время (style='D' позволяет в будущем наводиться на время, для получения точной даты) 
     embed = disnake.Embed(title=f"Редактирование сообщения", description=f"Пользователь: {after.author.mention} \nКанал: {after.channel.mention} \nВремя: {time}", color=disnake.Colour.yellow()) # создание эмбеда
-    embed.add_field(name="Прошлое содержание: ", value=f"> {before.content}", inline=False) # добовляем строки (.content - позволяет увидеть содержимое этого сообщения)
-    embed.add_field(name="Новое содержание: ", value=f"> {after.content}", inline=False) # добовляем строки (.content - позволяет увидеть содержимое этого сообщения)
+    embed.add_field(name="Прошлое содержание: ", value=f"> {before.content}", inline=False) # добавляем строки (.content - позволяет увидеть содержимое этого сообщения)
+    embed.add_field(name="Новое содержание: ", value=f"> {after.content}", inline=False) # добавляем строки (.content - позволяет увидеть содержимое этого сообщения)
     embed.set_thumbnail(url=after.author.display_avatar) # устанавливаем аватарку пользователя, который отредактировал сообщение
     await chnllog.send(embed=embed) # отправляем сообщение
 
