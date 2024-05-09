@@ -21,7 +21,7 @@ async def on_message_delete(message: disnake.Message): # функция сраб
     async for deleted_by in message.guild.audit_logs(action=disnake.AuditLogAction.message_delete, limit=1): # получаем пользователя (который удалил сообщение) через аудит сервера
         time = (disnake.utils.format_dt(datetime.now(), style='D')) # получаем время (style='D' позволяет в будущем наводиться на время, для получения точной даты) 
         embed = disnake.Embed(title=f"Удаление сообщения", description=f"Автор сообщения: {message.author.mention} \nУдалил сообщение: {deleted_by.user.mention} \nКанал: {message.channel.mention} \nВремя: {time}", color=disnake.Colour.red()) # создание эмбеда
-        embed.add_field(name="Содержание: ", value=f"> {message.content}", inline=False) # добовляем строки (.content - позволяет увидеть содержимое этого сообщения)
+        embed.add_field(name="Содержание: ", value=f"> {message.content}", inline=False) # добавляем строки (.content - позволяет увидеть содержимое этого сообщения)
         embed.set_thumbnail(url=message.author.display_avatar) # устанавливаем аватарку пользователя, чье сообщение было удалено
         await chnllog.send(embed=embed) # отправляем сообщение
 
