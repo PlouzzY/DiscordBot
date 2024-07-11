@@ -8,6 +8,7 @@ bot = commands.Bot(command_prefix="=", intents=intents) # устанавлива
 bot.remove_command("help") # удаляем встроенную команду help 
 
 # Импортируйте библиотеку!
+# Так же, ознакомьтесь с - Описание #7
 for file in os.listdir("./cogs"): # перебираем папку cogs
     if file.endswith(".py"): # проверка: если файл с расширением "py"
         bot.load_extension(f"cogs.{file[:-3]}") # подгружаем этот файл
