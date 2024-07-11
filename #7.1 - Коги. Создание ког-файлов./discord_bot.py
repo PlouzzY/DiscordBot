@@ -1,7 +1,7 @@
 # импортируем библиотеки (я работаю с disnake, есть еще discord.py)
 import disnake
 from disnake.ext import commands
-import os
+import os # библиотека для работы с файлами
 
 intents = disnake.Intents.all() # определяем разрешения
 bot = commands.Bot(command_prefix="=", intents=intents) # устанавливаем префикс и разрешения
