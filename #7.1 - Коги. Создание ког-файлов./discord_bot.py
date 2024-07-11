@@ -7,7 +7,7 @@ intents = disnake.Intents.all() # определяем разрешения
 bot = commands.Bot(command_prefix="=", intents=intents) # устанавливаем префикс и разрешения
 bot.remove_command("help") # удаляем встроенную команду help 
 
-
+# Импортируйте библиотеку!
 for file in os.listdir("./cogs"): # перебираем папку cogs
     if file.endswith(".py"): # проверка: если файл с расширением "py"
         bot.load_extension(f"cogs.{file[:-3]}") # подгружаем этот файл
