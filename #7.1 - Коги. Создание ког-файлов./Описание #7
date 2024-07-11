@@ -8,4 +8,4 @@
 
 3. Синтаксис для ког-файлов:
   ° bot.command() - commands.command()
-  ° bot.slash_command() - **commands.slash_command()** 
+  ° bot.slash_command() - commands.slash_command()
